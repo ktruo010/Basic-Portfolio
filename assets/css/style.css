@@ -1,102 +1,132 @@
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
-}
-.nav {
+    padding: 0;
+    height: 100%
+  }
+/*HEADER*/
+  .header {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    height: 100px;
     background-color: white;
-    width: 100%;
-    height: 110px;
-    border-bottom: 2px solid grey;
+    border-bottom: grey solid 2px;
 }
-.titlebox {
-    grid-column: 2 / span 1;
+.title {
+    grid-column: 2;
     background-color: turquoise;
-    text-align: center;
     color: white;
-    padding-top: 14%;
+    text-align: center;
+    padding-top: 1em;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-ul {
-    grid-column: 5 / span 6;
-    padding-top: 30px;
+.links {
+    grid-column: 4;
+    padding-top: 2em;
 }
 li {
     display: inline;
-    color: grey;
-    font-size: 20px;
     padding-left: 20px; 
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.bodyrow {
-    display: grid;
-    grid-template-rows: 1fr 10fr 1fr;
-    grid-template-columns: 2fr 8fr 2fr;
-    height: 700px;
-    width: 1664 px;
+li:not(:last-child) { 
+  border-right:solid 1px;
+  color: lightgrey;
+  padding-right: 20px;
 }
-body {
-    background-color: lightgrey;
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: grey;
 }
-.colc {
-    margin-top: 50px;
-    grid-column: 2;
-    grid-row: 2;;
-    background-color: white;
-    border: 2px solid grey;
+a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: grey;
 }
-.header {
-    font-size: 35px;
-    padding: 35px;
-    grid-template-rows: 1fr 11fr;
-    color: turquoise;
+
+/*BODY*/
+.body {
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-image: url("../images/background.jpg");
+  height: 730px;
 }
-.hr {
-    border-bottom: 2px solid grey;
-    margin: 0px 20px 0px 20px;
+.box {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  background-color: white;
+  border: #b7b7b8 solid 2px;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
 }
-.text {
-    padding-top: 20px;
-    grid-row: 2;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 30px;
+.boxtitle {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-bottom: 3px solid #b7b7b8;
+  margin: 0px 25px 0px 25px;
 }
-.photo {
-    height:200px;
-    float: left;
-    margin-right: 100px;
-    margin: 20px;
+.boxheader {
+  grid-column: 1 / span 1;
+  padding-top: 1em;
+  font-size: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: turquoise; 
 }
+.portrait {
+  grid-row: 2 / span 1;
+  grid-column: 1;
+  height: 200px;
+  float: left;
+  margin: 30px 25px 25px 25px;
+}
+.bodytext {
+  grid-row: 2 / span 1;
+  grid-column: 1;
+  line-height: 30px;
+  font-size: 18px;
+  margin: 25px 25px 25px 25px;
+}
+/*FOOTER*/
 .footer {
-    grid-template-rows: 1fr;
-    background-color: grey;
-    width: 100%;
-    height: 110px;
-    border-top: 20px solid grey;
-    border-color: turquoise;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
+  display: grid;
+  height: 90px;
+  background-color: grey;
+  border-top: 10px solid turquoise;
 }
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-  .msg {
-      height: 200px;
-  }
-  .button {
-    background-color: turquoise;
-    border: none;
-    color: white;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-  }
+.copyright {
+  width: 100%;
+  color: #fff;
+  line-height: 40px;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*Contact*/
+.contactbody {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 5fr;
+  padding: 0px 30px 0px 30px;
+}
+.label {
+  padding-top: 20px;
+}
+.button {
+  height: 30px;
+  width: 100px; 
+  margin: 20px 0px 20px 0px;
+  background-color: turquoise;
+  color: white;
+}
+/*Portfolio*/
+.photo {
+  height:200px;
+  float: left;
+  margin-right: 100px;
+  margin: 20px;
+}
